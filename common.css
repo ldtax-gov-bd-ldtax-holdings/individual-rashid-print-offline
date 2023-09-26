@@ -1,0 +1,253 @@
+
+/*
+* mazba kamal
+*/
+
+@font-face {
+    font-family: 'mySolaimanLipiFont';
+    src: url('../fonts/SolaimanLipi_22-02-2012.ttf') format('truetype');
+/*    src: url("SolaimanLipi_20-04-07.ttf");*/
+}
+
+@font-face {
+    font-family: 'boishakhi';
+    src: url('../fonts/Boishkhi/Boishkhi.ttf') format('truetype');
+/*    src: url("SolaimanLipi_20-04-07.ttf");*/
+}
+
+@font-face {
+    font-family: 'nikosh';
+    src: url('../fonts/NikoshBAN.ttf') format('truetype');
+/*    src: url("SolaimanLipi_20-04-07.ttf");*/
+}
+
+@font-face {
+    font-family: 'kalpurushregular';
+    src: url('../fonts/kalpurush/kalpurush-kalpurush.eot');
+}
+
+@font-face {
+    font-family: 'MyNikosh';
+    src: url(data:application/x-font-woff;charset=utf-8;base64) format('woff'),
+    url('../fonts/nikosh/NikoshBAN.ttf') format('truetype'),
+    url('../fonts/nikosh/NikoshBAN.svg#NikoshBAN') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.input_bangla{
+    font-family: boishakhi !important;
+    font-size: 90%;
+}
+
+.numeric_bangla{
+    font-family: boishakhi !important;
+    font-size: 80%;
+}
+
+.ldTaxBtn{
+    margin-top: 25px;
+}
+
+.portlet > .portlet-title > .caption i {
+    font-size: 20px;
+    margin-top: 1px;
+    margin-right: 5px;
+}
+
+
+
+body,h1,h2,h3,h4,h5,h6{
+    font-family: kalpurushregular !important;
+/*     font-family:'mySolaimanLipiFont',Arial,Vrinda,FallbackBengaliFont,Helvetica,sans-serif !important;*/
+}
+.bangla{
+    font-family: kalpurushregular !important;
+}
+#loader{
+    width: 100%;
+    height: 100%;
+    background: #9adad6;
+    position: fixed;
+    top: 1px;
+    opacity: .55;
+    display: none;
+}
+#loader img {
+    position: fixed;
+    top: 314px;
+    left: 737px;
+    z-index: 9999;
+}
+
+/* The cont */
+.cont {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.cont input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark1 {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  height: 15px;
+  width: 15px;
+  background-color: #fff;
+  border: 1px solid #979797;
+}
+
+/* On mouse-over, add a grey background color */
+.cont:hover input ~ .checkmark1 {
+  background-color: #fff;
+}
+
+/* When the checkbox is checked, add a blue background */
+.cont input:checked ~ .checkmark1 {
+  background-color: #fff;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark1:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.cont .active.checkmark1:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.cont .checkmark1:after {
+  left: 5px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid #584b42;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.checkbox input[type=checkbox], .checkbox-inline input[type=checkbox]{
+    position: absolute;
+    margin-top: 4px \9;
+    margin-left: -10px !important;
+}
+
+@media (min-width: 1281px) {
+
+    //CSS
+
+  }
+
+  /*
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+
+  @media (min-width: 1025px) and (max-width: 1280px) {
+
+    .page-header.navbar.navbar-fixed-top{
+        width: 100%;
+    }
+
+  }
+
+  /*
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+
+  /* @media (max-width: 991px) {
+    .page-header.navbar {
+        padding: 0;
+        display: block !important;
+    }
+  } */
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+
+    /*
+    .page-header.navbar.navbar-fixed-top{
+        display: block !important;
+        width: 100%;
+    }
+    */
+
+    .page-header.navbar {
+        background: #683091;
+        border-bottom: 1px solid #e9ecf3;
+    }
+
+  }
+
+  /*
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+  }
+
+  /*
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+
+  @media (min-width: 481px) and (max-width: 767px) {
+
+    form {
+      position: relative;overflow: scroll;width:300px;
+    }
+
+    .user_manual{
+      width: 100%;
+    }
+
+  }
+
+  /*
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+
+  @media (min-width: 320px) and (max-width: 480px) {
+
+    form {
+      position: relative;overflow: scroll;width:300px;
+    }
+
+    .user_manual{
+      width: 100%;
+    }
+
+    .user_manual a {
+      display: table;
+      margin: 0 auto;
+    }
+  }
+
+
+
