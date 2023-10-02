@@ -1,0 +1,507 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css"/>
+<link href="font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
+<link href="bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<!-- remove checkbox add.ctp -->
+<!-- <link href="uniform.default.css" rel="stylesheet" type="text/css"/> -->
+<link href="bootstrap-switch.min.css" rel="stylesheet" type="text/css"/>
+
+<link href="components-rounded.css" id="style_components" rel="stylesheet" type="text/css"/>
+
+<!-- remove checkbox add.ctp -->
+<!-- <link href="plugins-md.css" rel="stylesheet" type="text/css"/> -->
+<link href="layout.css" rel="stylesheet" type="text/css"/>
+<link href="light.css" rel="stylesheet" type="text/css" id="style_color"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="common.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.min.css">
+
+            <link rel="shortcut icon" href="https://ldtax.gov.bd/img/favicon.ico"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
+<style type="text/css">
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    /* Firefox */
+    input[type=number] {
+      -moz-appearance: textfield;
+    }
+    span.input-group-addon.addonExtra {
+        background: #8dc642;
+    }
+</style>
+
+<style>
+        .loaderDiv{
+          background: rgba(255,255,255,.95);
+          width: 100%;
+          height: 100%;
+          z-index: 10000;
+          position: fixed;
+          top: 0;
+          left: 0;
+          display: none;
+        }
+        .loader {
+
+          border: 5px solid #f3f3f3;
+          border-radius: 50%;
+          border-top: 5px solid blue;
+          border-bottom: 5px solid green;
+          -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite;
+          /*position: relative;*/
+          display: none;
+          left: 47%;
+          top: 36%;
+          height: 50px;
+          width: 50px;
+
+        }
+
+        @-webkit-keyframes spin {
+          0% { -webkit-transform: rotate(0deg); }
+          100% { -webkit-transform: rotate(360deg); }
+        }
+
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+    </style>
+
+</head>
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+<!-- DOC: Apply "page-header-fixed-mobile" and "page-footer-fixed-mobile" class to body element to force fixed header or footer in mobile devices -->
+<!-- DOC: Apply "page-sidebar-closed" class to the body and "page-sidebar-menu-closed" class to the sidebar menu element to hide the sidebar by default -->
+<!-- DOC: Apply "page-sidebar-hide" class to the body to make the sidebar completely hidden on toggle -->
+<!-- DOC: Apply "page-sidebar-closed-hide-logo" class to the body element to make the logo hidden on sidebar toggle -->
+<!-- DOC: Apply "page-sidebar-hide" class to body element to completely hide the sidebar on sidebar toggle -->
+<!-- DOC: Apply "page-sidebar-fixed" class to have fixed sidebar -->
+<!-- DOC: Apply "page-footer-fixed" class to the body element to have fixed footer -->
+<!-- DOC: Apply "page-sidebar-reversed" class to put the sidebar on the right side -->
+<!-- DOC: Apply "page-full-width" class to the body element to have full width page without the sidebar menu -->
+
+<body class="page-md page-sidebar-page-sidebar-closed-hide-logo page-header-fixed page-footer-fixed">
+    <div class="loaderDiv">
+        <div class="loader" style="align-content: center; width:300px; height: 300px; top: 0;"></div>
+        <div style="color:green; font-weight: bold; font-size:24px; text-align: center; position: fixed; width:100%; top: 18%;"
+            class="loadMsg">লোড হচ্ছে। <br>অনুগ্রহ করে <span style="color: red;">অপেক্ষা</span> করুন।</div>
+    </div>
+
+    <div class="page-header md-shadow-z-1-i navbar navbar-fixed-top">
+        <!-- BEGIN HEADER INNER -->
+        <div class="page-header-inner">
+            <!-- BEGIN LOGO -->
+            <div class="page-logo">
+                <!-- <a href=""> -->
+
+                <a href="https://office.land.gov.bd/">
+                    <img src="https://ldtax.gov.bd/assets/admin/layout4/img/logo-light.png" alt="logo"
+                        class="logo-default" />
+                </a>
+            </div>
+
+            <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse"
+                data-target=".navbar-collapse">
+            </a>
+
+
+            <div class="page-top">
+
+                <div class="top-menu">
+                    <ul class="nav navbar-nav pull-right">
+
+                        <li class="separator hide">
+                        </li>
+                        <li><br>
+
+                        </li>
+
+                        <li class="separator hide">
+                        </li>
+
+                        <img src="https://ldtax.gov.bd/assets/admin/layout4/img/nagorik.png" />
+
+                        <!-- END USER LOGIN DROPDOWN -->
+                    </ul>
+                </div>
+                <!-- END TOP NAVIGATION MENU -->
+            </div>
+            <!-- END PAGE TOP -->
+        </div>
+        <!-- END HEADER INNER -->
+    </div>
+    <!-- END HEADER-->
+
+    <!-- <div>You will be auto logged out in <span id="timeOut"></span> seconds.</div> -->
+    <div class="clearfix">
+    </div>
+    <!-- BEGIN CONTAINER -->
+
+
+    <div class="page-container">
+        <!-- BEGIN SIDEBAR -->
+        <!-- END SIDEBAR -->
+
+
+        <div class="page-content-wrapper">
+            <div class="">
+                <!-- end -->
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="portlet box blue">
+                            <div class="portlet-title">
+                                <div class="caption">
+                                    <i class="fa fa-globe"></i>ভূমি উন্নয়ন কর পরিশোধ রসিদ
+                                </div>
+                                <div class="tools">
+                                    <a href="javascript:;" class="collapse">
+                                    </a>
+                                    <a href="#portlet-config" data-toggle="modal" class="config">
+                                    </a>
+                                    <a href="javascript:;" class="reload">
+                                    </a>
+                                    <a href="javascript:;" class="remove">
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="portlet-body">
+                                <div id="printArea" style="width: 815px; margin: 0 auto;">
+                                    <div class="col-md-12">
+                                        <style type="text/css">
+                                            body {
+                                                font-family: "kalpurush", Arial, sans-serif;
+                                                font-size: 13px !important;
+                                                line-height: 1.2;
+                                                color: #333;
+                                                background-color: #fff;
+                                            }
+
+                                            .dotted_botton {
+                                                border: none;
+                                                border-bottom: 1px dotted #000;
+                                                background-color: #fff;
+                                            }
+
+                                            .border_none {
+                                                border-top: none !important;
+                                            }
+
+                                            .table-bordered {
+                                                border: 1px solid #ddd;
+                                            }
+
+                                            .qrcode-print {
+                                                width: 100%;
+                                                display: list-item;
+                                                list-style-image: url(data:image/png;base64,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);
+                                                list-style-position: inside;
+                                                background-repeat: no-repeat;
+                                            }
+
+                                            .b1 {
+                                                border: 1px dotted;
+                                                padding: 2px;
+                                            }
+                                        </style>
+                                        <style type="text/css" media="print">
+                                            @page {
+                                                size: a4;
+                                                /* auto is the initial value */
+                                                margin: 0mm;
+                                                /* this affects the margin in the printer settings */
+                                            }
+
+                                            html {
+                                                background-color: #FFFFFF;
+                                                margin: 0px;
+                                                /* this affects the margin on the html before sending to printer */
+                                            }
+
+                                            body {
+                                                border: solid 0px blue;
+                                                margin: 0mm;
+                                                /* margin you want for the content */
+                                            }
+                                        </style>
+
+                                        <div
+                                            style="font-family:'kalpurush',Arial,sans-serif; font-size:14px !important; line-height:1.2;color: #333; background-color: #fff; width: 7.9in; border-radius: 10px; border: dotted 1px; padding: 10px; float: left; margin: 30px auto;">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div style="">
+                                                        <table style="width: 100%;">
+                                                            <tr>
+                                                                <td class="text-left">বাংলাদেশ ফরম নং ১০৭৭</td>
+                                                                <td class="text-right">(পরিশিষ্ট: ৩৮)</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-left">(সংশোধিত)</td>
+                                                                <td class="text-right input_bangla">ক্রমিক নং
+                                                                    670423025423</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-center" colspan="2">
+                                                                    ভূমি উন্নয়ন কর পরিশোধ রসিদ </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-center" colspan="2">
+                                                                    (অনুচ্ছেদ ৩৯২ দ্রষ্টব্য) </td>
+                                                            </tr>
+                                                        </table>
+                                                        <div style="width: 100%; height: 20px;"></div>
+                                                        <table style="width:100%;">
+                                                            <tr>
+                                                                <td style="width: 320px;">সিটি কর্পোরেশন /পৌর /ইউনিয়ন
+                                                                    ভূমি অফিসের নাম :</td>
+                                                                <td class="dotted_botton">বৈদ্যের-বাজার ইউনিয়ন ভূমি অফিস</td>
+                                                            </tr>
+                                                        </table>
+                                                        <table style="margin-top:5px; width:100%;">
+                                                            <tr>
+                                                                <td style="width: 130px;">মৌজার ও জে. এল. নং:</td>
+                                                                <td class="dotted_botton numeric_bangla"
+                                                                    style="padding: 0 10px 0 5px;">দিঘীচানপুর - 126</td>
+                                                                <td style="width: 105px">উপজেলা / থানা :</td>
+                                                                <td class="dotted_botton" style="padding: 0 10px 0 5px;">সোনারগাঁ</td>
+                                                                <td style="width: 40px">জেলা:</td>
+                                                                <td class="dotted_botton"
+                                                                    style="padding: 0 10px 0 5px;">নারায়নগঞ্জ</td>
+                                                            </tr>
+                                                        </table>
+
+                                                        <table style="margin-top:5px; width:100%;">
+                                                            <tr>
+                                                                <td style="width: 90px">মালিকের নাম :</td>
+                                                                <td class="dotted_botton" style="padding-left: 10px;">
+                                                                    আছিয়া বেগম গং </td>
+                                                            </tr>
+                                                        </table>
+
+                                                        <table style="margin-top:5px; width:100%;">
+                                                            <tr>
+                                                                <td style="width: 225px">
+                                                                    <!-- ২ নং রেজিস্টার অনুযায়ী হোল্ডিং নম্বার -->
+                                                                    ২ নং রেজিস্টার অনুযায়ী হোল্ডিং নম্বর:</td>
+                                                                <td class="dotted_botton numeric_bangla"
+                                                                    style="padding-left: 10px;">
+                                                                    349 </td>
+                                                            </tr>
+                                                        </table>
+
+                                                        <table style="margin-top:5px; width:100%;">
+                                                            <tr>
+                                                                <td style="width: 75px">খতিয়ান নং:</td>
+                                                                <td class="dotted_botton numeric_bangla"
+                                                                    style="padding-left: 10px;">
+                                                                    350 </td>
+                                                            </tr>
+                                                        </table>
+                                                        <div style="height: 10px"></div>
+                                                    </div>
+                                                    <table class="b1"
+                                                        style="border-collapse: collapse; margin:10px 2px ; width: 99%; font-size: 9px; float: left;">
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="b1">ক্রমঃ</th>
+                                                                <!-- <th class="b1">খতিয়ান নং</th> -->
+                                                                <th class="b1">দাগ নং</th>
+                                                                <th class="b1">জমির শ্রেণী</th>
+                                                                <th class="b1">জমির পরিমাণ (শতক)</th>
+                                                            </tr>
+                                                        </thead>
+                                    <tbody style="height: 0px;">
+
+                                             <tr>
+                                            <td class="b1 input_bangla">1</td>
+                                            <!-- <td class="b1 input_bangla">00</td> -->
+                                            <td class="b1 input_bangla">86</td>
+                                            <td class="b1">নাল( কৃষি) </td>
+                                            <td class="b1 input_bangla">6.25000</td>
+                                        </tr>
+			<tr>
+                                            <td class="b1 input_bangla">2</td>
+                                            <!-- <td class="b1 input_bangla">00</td> -->
+                                            <td class="b1 input_bangla">47</td>
+                                            <td class="b1">নাল( কৃষি) </td>
+                                            <td class="b1 input_bangla">25.00000</td>
+                                        </tr>
+                                                            
+                                                        </tbody>
+                                                    </table>
+			 </tbody>
+ 
+			</table>
+                                                </div>
+                                            </div>
+
+
+                                            <table style="width: 100%;">
+                                                <tr>
+                                                    <td class="b1 text-center" style="width: 50%;">সর্বমোট জমি (শতক)
+                                                    </td>
+                                                    <td class="b1 input_bangla" style="width: 50%;">31.25</td>
+                                                </tr>
+                                            </table>
+                                            <table class="table table-striped table-bordered table-hover"
+                                                style="width:100% !important;">
+                                                <tr>
+                                                    <th style="text-align: center;" colspan="8">আদায়ের বিবরণ </th>
+                                                </tr>
+
+                                                <tr>
+                                                    <th style="text-align: center;">তিন বৎসরের ঊর্ধ্বের বকেয়া</th>
+                                                    <th style="text-align: center;">গত তিন বৎসরের বকেয়া
+                                                    </th>
+                                                    <th style="text-align: center;">বকেয়ার সুদ ও ক্ষতিপূরণ
+                                                    </th>
+                                                    <th style="text-align: center;">হাল দাবি
+                                                    </th>
+                                                    <th style="text-align: center;">মোট দাবি</th>
+                                                    <th style="text-align: center;">মোট আদায়
+                                                    </th>
+                                                    <th style="text-align: center;">মোট বকেয়া</th>
+                                                    <th style="text-align: center;">মন্তব্য</th>
+                                                </tr>
+
+                                                <tr>
+                                                    <td align="center">০</td>
+                                                    <td align="center">৯৩৮</td>
+                                                    <td align="center">২৮২</td>
+                                                    <td align="center">৩১২</td>
+                                                    <td align="center">
+                                                        ১,৫৩২</td>
+
+                                                    <td align="center">১,৫৩২</td>
+                                                    <td align="center">
+                                                        ০ </td>
+                                                    <td align="center"></td>
+                                                </tr>
+                                            </table>
+                                            <div style="width:100% !important;">
+                                                <p class="dotted_botton"> সর্বমোট (কথায়):
+                                                    এক হাজার পাঁচ শত বত্রিশ টাকা মাত্র ।
+                                                </p>
+                                            </div>
+                                            <div class="row" style="width:100% !important; justify-content: center;">
+                                                <div class="col-md-12">
+                                                    <div style="width: 290px; float: left;" align="left">
+                                                        <p style="margin: 0 !important;">
+                                                        <p style="margin: 0 !important;">নোট: সর্বশেষ কর পরিশোধের সাল -
+                                                            ১৪২৭ থেকে ১৪৩০</p>
+                                                        </p>
+                                                        <p class="input_bangla"> চালান নং : 2223-0017722390</p>
+                                                        <p>
+                                                            তারিখ :
+                                                        <div style="margin-top: -37px;margin-left: 10px;">
+                                                            <p
+                                                                style="width: 115px;padding: 0;margin: 0;margin-left: 38px;margin-bottom: 2px;">
+                                                                ২৮ আষাঢ় ১৪৩০</p><span
+                                                                style="border-top:1px solid; margin-left:36px;">১২
+                                                                জুলাই, ২০২৩</span></p>
+                                                        </div>
+                                                        </p>
+                                                    </div>
+                                                    <div style="width: 125px; float: left;" align="center">
+                                                        <!-- <img style="-webkit-print-color-adjust: exact; max-width: 100%; height: auto; " src="https://ldtax.gov.bd/img/qrimg/" width="100" height="100"> -->
+                                                        <div class="qrcode-print"></div>
+                                                    </div>
+                                                    <div
+                                                        style="width: 265px; float: right; text-align: right;font-size: 12px;font-family: 'kalpurush',Arial,sans-serif;">
+                                                        <p class="text-center" style="padding: 5px; ">এই দাখিলা
+                                                            ইলেক্ট্রনিকভাবে তৈরি করা হয়েছে, <br> কোন স্বাক্ষর প্রয়োজন
+                                                            নেই।</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-md-12 text-right">
+                                                    <div
+                                                        style="width: 100%; border-top: 1px dotted gray; margin-top:15px;">
+                                                    </div>
+                                                    <div class="from-controll">1/1</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- // -->
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div style="text-align: center !important; display: block !important;">
+                                            <input style="margin-top: 10px; padding: 10px;" id="print"
+                                                class="btn btn-md blue" type="button" onclick="printDiv('printArea')"
+                                                value="প্রিন্ট" />
+                                            <!-- <a class="btn btn-md btn-success" href="https://ldtax.gov.bd/ldtax-holdings/individual-rashid-print-offline-preview/" target="_blank" style="margin-top: 10px;padding:10px;">PDF</a> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <script type="text/javascript">
+                    function printDiv(divName) {
+                        var printContents = document.getElementById(divName).innerHTML;
+                        var originalContents = document.body.innerHTML;
+
+                        document.body.innerHTML = printContents;
+                        setTimeout(function () { }, 500);
+                        window.print();
+
+                        document.body.innerHTML = originalContents;
+                    }
+                </script>
+
+            </div>
+        </div>
+
+    </div>
+    <style>
+        .title {
+            font-size: 15px;
+            color: #592e80;
+            text-align: center;
+            font-weight: 600;
+            padding-bottom: 7px;
+        }
+    </style>
+
+    <div class="page-footer">
+        <div class="page-footer-inner">
+            <a href="http://www.bangladesh.gov.bd/" target="_blank">
+                <img src="https://ldtax.gov.bd/assets/admin/layout4/img/bd.png" alt="" />
+            </a> <span class="title">ভূমি সংস্কার বোর্ড, ভূমি মন্ত্রণালয়, গণপ্রজাতন্ত্রী বাংলাদেশ সরকার</span>
+            <!--   <a href="http://www.a2i.pmo.gov.bd/" target="_blank">
+	<img src="https://ldtax.gov.bd/assets/admin/layout4/img/a2i.png" alt=""/>
+            </a> -->
+            &nbsp;&nbsp;
+        </div>
+        <div class="page-footer-inner pull-right">
+            <span class="title">কারিগরি সহায়তায়</span>
+            <a href="http://mysoftheaven.com/" target="_blank">
+                <img src="https://ldtax.gov.bd/img/auto.png" alt="" style="width: 140px;" />
+            </a>
+            &nbsp;&nbsp;
+        </div>
+    </div>
+
+</body>
+
+</html>
