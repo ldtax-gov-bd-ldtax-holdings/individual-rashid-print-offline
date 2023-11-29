@@ -1,0 +1,469 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="utf-8"/><title> ভূমি উন্নয়ন কর সিস্টেম অটোমেশন:
+        LdtaxHoldings</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta content="width=600, initial-scale=1.0, minimum-scale=1.0, maximum-scale=3.0, user-scalable=no" name="viewport"/>
+<meta content="" name="description"/>
+<meta content="" name="author"/>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css"/>
+<link href="font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
+<link href="bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<!-- remove checkbox add.ctp -->
+<!-- <link href="uniform.default.css" rel="stylesheet" type="text/css"/> -->
+<link href="bootstrap-switch.min.css" rel="stylesheet" type="text/css"/>
+
+<link href="components-rounded.css" id="style_components" rel="stylesheet" type="text/css"/>
+
+<!-- remove checkbox add.ctp -->
+<!-- <link href="plugins-md.css" rel="stylesheet" type="text/css"/> -->
+<link href="layout.css" rel="stylesheet" type="text/css"/>
+<link href="light.css" rel="stylesheet" type="text/css" id="style_color"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="common.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.min.css">
+
+            <link rel="shortcut icon" href="https://ldtax.gov.bd/img/favicon.ico"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
+<style type="text/css">
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    /* Firefox */
+    input[type=number] {
+      -moz-appearance: textfield;
+    }
+    span.input-group-addon.addonExtra {
+        background: #8dc642;
+    }
+</style>
+
+<style>
+        .loaderDiv{
+          background: rgba(255,255,255,.95);
+          width: 100%;
+          height: 100%;
+          z-index: 10000;
+          position: fixed;
+          top: 0;
+          left: 0;
+          display: none;
+        }
+        .loader {
+
+          border: 5px solid #f3f3f3;
+          border-radius: 50%;
+          border-top: 5px solid blue;
+          border-bottom: 5px solid green;
+          -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite;
+          /*position: relative;*/
+          display: none;
+          left: 47%;
+          top: 36%;
+          height: 50px;
+          width: 50px;
+
+        }
+
+        @-webkit-keyframes spin {
+          0% { -webkit-transform: rotate(0deg); }
+          100% { -webkit-transform: rotate(360deg); }
+        }
+
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+    </style>
+
+</head>
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+<!-- DOC: Apply "page-header-fixed-mobile" and "page-footer-fixed-mobile" class to body element to force fixed header or footer in mobile devices -->
+<!-- DOC: Apply "page-sidebar-closed" class to the body and "page-sidebar-menu-closed" class to the sidebar menu element to hide the sidebar by default -->
+<!-- DOC: Apply "page-sidebar-hide" class to the body to make the sidebar completely hidden on toggle -->
+<!-- DOC: Apply "page-sidebar-closed-hide-logo" class to the body element to make the logo hidden on sidebar toggle -->
+<!-- DOC: Apply "page-sidebar-hide" class to body element to completely hide the sidebar on sidebar toggle -->
+<!-- DOC: Apply "page-sidebar-fixed" class to have fixed sidebar -->
+<!-- DOC: Apply "page-footer-fixed" class to the body element to have fixed footer -->
+<!-- DOC: Apply "page-sidebar-reversed" class to put the sidebar on the right side -->
+<!-- DOC: Apply "page-full-width" class to the body element to have full width page without the sidebar menu -->
+
+<body class="page-md page-sidebar-page-sidebar-closed-hide-logo page-header-fixed page-footer-fixed">
+    <div class="loaderDiv">
+        <div class="loader" style="align-content: center; width:300px; height: 300px; top: 0;"></div>
+        <div style="color:green; font-weight: bold; font-size:24px; text-align: center; position: fixed; width:100%; top: 18%;"
+            class="loadMsg">লোড হচ্ছে। <br>অনুগ্রহ করে <span style="color: red;">অপেক্ষা</span> করুন।</div>
+    </div>
+
+    <div class="page-header md-shadow-z-1-i navbar navbar-fixed-top">
+        <!-- BEGIN HEADER INNER -->
+        <div class="page-header-inner">
+            <!-- BEGIN LOGO -->
+            <div class="page-logo">
+                <!-- <a href=""> -->
+
+                <a href="https://office.land.gov.bd/">
+                    <img src="https://ldtax.gov.bd/assets/admin/layout4/img/logo-light.png" alt="logo"
+                        class="logo-default" />
+                </a>
+            </div>
+
+            <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse"
+                data-target=".navbar-collapse">
+            </a>
+
+
+            <div class="page-top">
+
+                <div class="top-menu">
+                    <ul class="nav navbar-nav pull-right">
+
+                        <li class="separator hide">
+                        </li>
+                        <li><br>
+
+                        </li>
+
+                        <li class="separator hide">
+                        </li>
+
+                        <img src="https://ldtax.gov.bd/assets/admin/layout4/img/nagorik.png" />
+
+                        <!-- END USER LOGIN DROPDOWN -->
+                    </ul>
+                </div>
+                <!-- END TOP NAVIGATION MENU -->
+            </div>
+            <!-- END PAGE TOP -->
+        </div>
+        <!-- END HEADER INNER -->
+    </div>
+    <!-- END HEADER-->
+
+    <!-- <div>You will be auto logged out in <span id="timeOut"></span> seconds.</div> -->
+    <div class="clearfix">
+    </div>
+    <!-- BEGIN CONTAINER -->
+
+
+    <div class="page-container">
+        <!-- BEGIN SIDEBAR -->
+        <!-- END SIDEBAR -->
+
+
+        <div class="page-content-wrapper">
+            <div class="">
+                <!-- end -->
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="portlet box blue">
+                            <div class="portlet-title">
+                                <div class="caption">
+                                    <i class="fa fa-globe"></i>ভূমি উন্নয়ন কর পরিশোধ রসিদ
+                                </div>
+                                <div class="tools">
+                                    <a href="javascript:;" class="collapse">
+                                    </a>
+                                    <a href="#portlet-config" data-toggle="modal" class="config">
+                                    </a>
+                                    <a href="javascript:;" class="reload">
+                                    </a>
+                                    <a href="javascript:;" class="remove">
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="portlet-body">
+                <div id="printArea" style="width: 815px; margin: 0 auto;">
+                    <div class="col-md-12">
+                        <style type="text/css">
+                            body{
+                                font-family: "kalpurush",Arial,sans-serif;
+                                font-size: 13px !important;
+                                line-height: 1.2;
+                                color: #333;
+                                background-color: #fff;
+                            }
+                            .dotted_botton{
+                                border:none;
+                                border-bottom:1px dotted #000;
+                                background-color:#fff;
+                            }
+                            .border_none{
+                                border-top: none !important;
+                            }
+                            .table-bordered {
+                                border: 1px solid #ddd;
+                            }
+                            .qrcode-print{
+                               width:100%;
+                               display: list-item;
+                               list-style-image: url(data:image/jpeg;base64,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);
+                               list-style-position: inside;
+                               background-repeat: no-repeat;
+                            }
+                            .b1 {border: 1px dotted; padding: 2px;}
+                        </style>
+                        <style type="text/css" media="print">
+                            @page {
+                                size:  a4;   /* auto is the initial value */
+                                margin: 0mm;  /* this affects the margin in the printer settings */
+                            }
+                            html{
+                                background-color: #FFFFFF; 
+                                margin: 0px;  /* this affects the margin on the html before sending to printer */
+                            }
+                            body{
+                                border: solid 0px blue ;
+                                margin: 0mm; /* margin you want for the content */
+                            }
+                        </style>
+
+                        <div style="font-family:'kalpurush',Arial,sans-serif; font-size:14px !important; line-height:1.2;color: #333; background-color: #fff; width: 7.9in; height: 11in; border-radius: 10px; border: dotted 1px; padding: 10px; float: left; margin: 30px auto; position: relative;">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="from-controll">
+                                        <table style="width: 100%;">
+                                            <tr>
+                                                <td class="text-left">বাংলাদেশ ফরম নং ১০৭৭</td>
+                                                <td class="text-right">(পরিশিষ্ট: ৩৮)</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-left">(সংশোধিত)</td>
+                                                <td class="text-right input_bangla">ক্রমিক নং 670423047198</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center" colspan="2">
+                                                    ভূমি উন্নয়ন কর পরিশোধ রসিদ                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center" colspan="2">
+                                                    (অনুচ্ছেদ ৩৯২ দ্রষ্টব্য)                                                </td>
+                                            </tr>
+                                        </table>
+                                        <div style="width: 100%; height: 20px;"></div>
+                                        <table style="width:100%;">
+                                            <tr>
+                                                <td style="width: 320px;">সিটি কর্পোরেশন /পৌর /ইউনিয়ন ভূমি অফিসের নাম  :</td>
+                                                <td class="dotted_botton">বৈদ্যের-বাজার ইউনিয়ন ভূমি অফিস</td>
+                                            </tr>
+                                        </table>
+                                        <table style="margin-top:5px; width:100%;">
+                                            <tr>
+                                                <td style="width: 140px;">মৌজার ও জে. এল. নং:</td>
+                                                <td class="dotted_botton input_bangla" style="padding: 0 10px 0 5px;">সাত ভাইয়াপাড়া - 122</td>
+                                                <td style="width: 105px">উপজেলা / থানা  :</td>
+                                                <td class="dotted_botton" style="padding: 0 10px 0 5px;">সোনারগাঁ</td>
+                                                <td style="width: 40px">জেলা:</td>
+                                                <td class="dotted_botton" style="padding: 0 10px 0 5px;">নারায়নগঞ্জ</td>
+                                            </tr>
+                                        </table>
+                                        
+                                        <table style="margin-top:5px; width:100%;">
+                                            <tr>
+                                                <td style="width: 225px"><!-- ২ নং রেজিস্টার অনুযায়ী হোল্ডিং নম্বার -->
+                                                ২ নং রেজিস্টার অনুযায়ী হোল্ডিং নম্বর:</td>
+                                                <td class="dotted_botton numeric_bangla" style="padding-left: 10px;">
+                                                    144                                                </td>
+                                            </tr>
+                                        </table>
+
+                                        <table style="margin-top:5px; width:100%;">
+                                            <tr>
+                                                <td style="width: 75px">খতিয়ান নং:</td>
+                                                <td class="dotted_botton numeric_bangla" style="padding-left: 10px;">
+                                                    146                                                </td>
+                                            </tr>
+                                        </table>
+                                        <div style="height: 10px"></div>
+                                    </div>
+
+                                    <div class="from-controll">
+                                        <p style="font-weight: bold; font-size: 12px; text-align: center; margin: 0px; padding: 0px;"><u>মালিকের বিবরণ</u></p>
+                                    </div>
+                                                                                            <table style="border: 1px dotted; border-collapse: collapse; margin:10px 2px ; width: 100%; font-size: 11px; float: left;">
+                                        <thead>
+                                            <tr>
+                                                <th style="width:10%;text-align: center;" class="b1">ক্রমঃ</th>
+                                                <th style="width:60%;text-align: center;" class="b1">মালিকের নাম</th>
+                                                <th style="width:25%;text-align: center;" class="b1">মালিকের অংশ</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody style="height: 21px;">
+                                                                                <tr>
+                                                <td class="b1 input_bangla">1</td>
+                                                <td class="b1 input_bangla">শ্রী রামাচন্দ্র বর্মন</td>
+                                                <td class="b1 input_bangla text-right">1</td>
+                                            </tr>
+                                                                            </tbody>
+                                    </table>
+                            </div></div><div class="col-md-12">
+                                                <p style="font-weight: bold; font-size: 12px; text-align: center; margin: 0px; padding: 0px;"><u>জমির বিবরণ</u></p>
+                                            </div><div class="row"><div class="col-md-12">                                    <table style="border: 1px dotted; border-collapse: collapse; margin:10px 2px ; width: 100%; font-size: 11px; float: left;">
+                                        <thead>
+                                            <tr>
+                                                <th class="b1">ক্রমঃ</th>
+                                                <th class="b1">দাগ নং</th>
+                                                <th class="b1">জমির শ্রেণী</th>
+                                                <th class="b1">জমির পরিমাণ (শতক)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody style="height: 21px;">
+                                                                                <tr>
+                                                <td class="b1 input_bangla">1</td>
+                                                <td class="b1 input_bangla">12</td>
+                                                <td class="b1">
+                                                    ভিটি                                               </td>
+                                                <td class="b1 input_bangla">6.00000</td>
+                                            </tr>
+                                                                            </tbody>
+                                    </table>
+                                   
+                            
+                                    <table style="border: 1px dotted; border-collapse: collapse; margin:10px 2px ; width: 100%; font-size: 12px;">
+                                        <tr>
+                                            <td class="b1 text-center" style="width: 50%;">সর্বমোট জমি (শতক)</td>
+                                            <td class="b1 input_bangla" style="width: 50%;">5.46</td>
+                                        </tr>
+                                    </table>
+                                    <div style="height: 10px;"></div>
+                                    <table class="table table-striped table-bordered table-hover" style="margin:10px 2px ; width:100% !important;">
+                                        <tr>
+                                            <th style="text-align: center;" colspan="8">আদায়ের বিবরণ </th>
+                                        </tr>
+
+                                        <tr>
+                                            <td style="text-align: center;" >তিন বৎসরের ঊর্ধ্বের বকেয়া</td>
+                                            <td style="text-align: center;">গত তিন বৎসরের বকেয়া</td>
+                                            <td style="text-align: center;">বকেয়ার সুদ ও ক্ষতিপূরণ</td>
+                                            <td style="text-align: center;" >হাল দাবি</td>
+                                            <td style="text-align: center;" >মোট দাবি</td>
+                                            <td style="text-align: center;" >মোট আদায়</td>
+                                            <td style="text-align: center;" >মোট বকেয়া</td>
+                                            <td style="text-align: center;" >মন্তব্য</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="center">০</td>
+                                            <td align="center">২,২৬০</td>
+                                            <td align="center">১,০৯৫</td>
+                                            <td align="center">৪৬০</td>
+                                            <td align="center">
+                                                ৩,৮১৫</td>
+
+                                            <td align="center">৩,৮১৫</td>
+                                            <td align="center">
+                                                ০                                            </td>
+                                            <td align="center"></td>
+                                        </tr>
+                                    </table>
+                                    <div style="width:100% !important; margin:10px 2px ;">
+                                        <p class="dotted_botton"> সর্বমোট (কথায়):
+                                                                                        তিন হাজার আট শত পনের টাকা মাত্র ।
+                                        </p>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div style="width: 330px; float: left;" align="left">
+                                                <p style="margin: 0 !important;"><p style="margin: 0 !important;">নোট: সর্বশেষ কর পরিশোধের সাল - 
+        ১৪২৬ থেকে ১৪৩০</p></p>
+                                                <p class="input_bangla"> চালান নং : </p>
+                                                <p>
+                                                    তারিখ : <div style="margin-top: -37px;margin-left: 10px;"><p style="width: 115px;padding: 0;margin: 0;margin-left: 38px;margin-bottom: 2px;">২৮ শ্রাবন ১৪৩০</p><span style="border-top:1px solid; margin-left:36px;">১২ আগষ্ট, ২০২৩</span></p></div>
+                                                </p>
+                                            </div>
+                                            <div style="width: 90px; float: left;" align="center">
+                                                <div class="qrcode-print"></div>
+                                            </div>
+                                            <div style="width: 265px; float: right; text-align: right;font-size: 12px;font-family: 'kalpurush',Arial,sans-serif;" >
+                                                                                                    <p class="text-center" style="padding: 5px; ">এই দাখিলা ইলেক্ট্রনিকভাবে তৈরি করা হয়েছে, <br> কোন স্বাক্ষর প্রয়োজন নেই।</p>
+                                                                                            </div>
+                                        </div>   
+                                    </div>   
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 text-right" style="width: 100%; position: absolute; bottom: 0; right: 0;">
+                                    <div style="width: 100%; border-top: 1px dotted gray; margin-top:15px;"></div>
+                                    <div class="from-controll">1/1</div>
+                                </div>
+                            </div>                 
+                        </div>
+                    </div>
+                </div>
+                <!-- // -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div style="text-align: center !important; display: block !important;">
+                            <input style="margin-top: 10px; padding: 10px;" id="print" class="btn btn-md blue" type="button" onclick="printDiv('printArea')" value="প্রিন্ট" />
+                            <!-- <a class="btn btn-md btn-success" href="https://ldtax.gov.bd/ldtax-holdings/individual-rashid-print-offline-preview/R3hERWI2ZG00dEpLQUtIZHBKV292UT09" target="_blank" style="margin-top: 10px;padding:10px;">PDF</a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                <script type="text/javascript">
+                    function printDiv(divName) {
+                        var printContents = document.getElementById(divName).innerHTML;
+                        var originalContents = document.body.innerHTML;
+
+                        document.body.innerHTML = printContents;
+                        setTimeout(function () { }, 500);
+                        window.print();
+
+                        document.body.innerHTML = originalContents;
+                    }
+                </script>
+
+            </div>
+        </div>
+
+    </div>
+    <style>
+        .title {
+            font-size: 15px;
+            color: #592e80;
+            text-align: center;
+            font-weight: 600;
+            padding-bottom: 7px;
+        }
+    </style>
+
+    <div class="page-footer">
+        <div class="page-footer-inner">
+            <a href="http://www.bangladesh.gov.bd/" target="_blank">
+                <img src="https://ldtax.gov.bd/assets/admin/layout4/img/bd.png" alt="" />
+            </a> <span class="title">ভূমি সংস্কার বোর্ড, ভূমি মন্ত্রণালয়, গণপ্রজাতন্ত্রী বাংলাদেশ সরকার</span>
+            <!--   <a href="http://www.a2i.pmo.gov.bd/" target="_blank">
+	<img src="https://ldtax.gov.bd/assets/admin/layout4/img/a2i.png" alt=""/>
+            </a> -->
+            &nbsp;&nbsp;
+        </div>
+        <div class="page-footer-inner pull-right">
+            <span class="title">কারিগরি সহায়তায়</span>
+            <a href="http://mysoftheaven.com/" target="_blank">
+                <img src="https://ldtax.gov.bd/img/auto.png" alt="" style="width: 140px;" />
+            </a>
+            &nbsp;&nbsp;
+        </div>
+    </div>
+
+</body>
+
+</html>
