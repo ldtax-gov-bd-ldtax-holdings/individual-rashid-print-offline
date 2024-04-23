@@ -1,0 +1,258 @@
+.mobile_noFieldRegister{
+  border-bottom: 1px solid red;
+}
+
+.page-header-fixed .page-container {
+    margin-top: 70px;
+}
+
+.tools{
+    display: none !important;
+}
+
+.demand_type_form{
+    padding: 10px;
+    margin: 5px;
+    width: 80%;
+}
+
+.page-sidebar.md-shadow-z-2-i{
+    position: fixed;
+}
+
+.dummy-user span{
+    color: #fff;
+}
+
+.mutationListSearchBtn button{
+    margin-top: 25px !important;
+    width: 100%;
+}
+
+.user_manual{
+  float: right;
+}
+
+/* From mutation */
+
+@media print {
+    .print_button {
+        display: none;
+    }
+
+    .table {
+      width: 30% !important;
+    }
+    .display_print{
+      display: none;
+    }
+    table.print_page {
+      width: 50% !important;
+    }
+    .portlet{
+     width: 50%;
+    }
+    .caption{
+      display: none;
+    }
+    .tools{
+      display: none;
+    }
+    .box {
+      border: none;
+    }
+}
+
+/* End */
+
+#ldtaxholding-form table tbody tr td{
+    /* width: 25%; */
+}
+
+.label.label-sm {
+    padding: 3px 6px 3px 5px !important;
+}
+
+.caption i {
+    font-size: 1.2em !important;
+    margin-top: 1px !important;
+    margin-right: 10px !important;
+}
+
+.tooltip-ex {
+    position: relative;
+    display: inline-block;
+    cursor: help;
+    color: black;
+    margin-right: 20px;
+    display: inline-block;
+    margin: 0;
+}
+
+    .tooltip-ex-left {
+        top: -5px;
+        bottom: auto;
+        right: 128%;
+   }
+
+   .tooltip-ex-text {
+        visibility: hidden;
+        position: absolute;
+        min-width: 180px;
+        background-color: #c2f284;
+        color: #000;
+        text-align: justify;
+        padding: 5px 0;
+        border-radius: 6px;
+        z-index: 1;
+        opacity: 0;
+        transition: opacity .6s;
+        padding: 8px;
+        font-size: 12px;
+    }
+
+   .tooltip-ex:hover .tooltip-ex-text { /* Makes tooltip visible when hovered on */
+    visibility: visible;
+    opacity: 1;
+   }
+
+   .admin .details {
+        position: absolute;
+        right: unset !important;
+        padding-left: 15px;
+        width: 100%;
+    }
+
+   .admin{
+        padding-top: 10px;
+        /* text-align: right; */
+        /* font-size: 34px; */
+        color: #fff;
+        letter-spacing: -1px;
+        /* margin-bottom: 0px; */
+        font-weight: 300;
+        height: 180px !important;
+   }
+
+   .admin .dashboard-stat {
+        /* padding-top: 25px; */
+        /* text-align: right; */
+        font-size: 34px;
+        line-height: 36px;
+        letter-spacing: -1px;
+        padding-left: 15px;
+        /* margin-bottom: 0px; */
+        /* font-weight: 300; */
+    }
+    .report-table{
+        padding: 0;
+        position: absolute;
+        margin-left: 10px;
+    }
+    .admin .visual{
+        height : 100% !important;
+        width : 100% !important;
+    }
+    /* .admin_group{
+        height: 180px !important;
+    } */
+/*
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+/* #hlodingData {
+    font-size: 13px;
+    font-weight: 400;
+} */
+
+@media (min-width: 1281px) {
+
+    //CSS
+
+  }
+
+  /*
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+  */
+
+  @media (min-width: 1025px) and (max-width: 1280px) {
+
+    .page-header.navbar.navbar-fixed-top{
+        width: 100%;
+    }
+
+  }
+
+  /*
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+
+  /* @media (max-width: 991px) {
+    .page-header.navbar {
+        padding: 0;
+        display: block !important;
+    }
+  } */
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+
+    /*
+    .page-header.navbar.navbar-fixed-top{
+        display: block !important;
+        width: 100%;
+    }
+    */
+
+    .page-header.navbar {
+        background: #683091;
+        border-bottom: 1px solid #e9ecf3;
+    }
+
+  }
+
+  /*
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+
+
+  }
+
+  /*
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+
+  @media (min-width: 481px) and (max-width: 767px) {
+
+    form {
+      position: relative;overflow: scroll;width:300px;
+    }
+
+  }
+
+  /*
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+
+  @media (min-width: 320px) and (max-width: 480px) {
+
+    form {
+      position: relative;overflow: scroll;width:300px;
+    }
+
+    .pull-right{
+      margin: 0 auto !important;
+      display: table;
+      float:none !important;
+    }
+
+  }
+
